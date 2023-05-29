@@ -1,4 +1,4 @@
-# This is Notes Application with React Native
+# This is Blog Application with React Native
 In this project you can (add, delete, edit, search, delete post). I did component interaction, navigation and react native concepts by building this Blog app.
 
 Packages used:
