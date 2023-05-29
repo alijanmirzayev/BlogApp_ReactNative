@@ -1,0 +1,69 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Jost-Black.ttf",
+      "sha1": "9587aed0e36bda176a5850f1e255cc16bed04120"
+    },
+    {
+      "path": "src/assets/fonts/Jost-BlackItalic.ttf",
+      "sha1": "96d55895f5cf41bdfa7e940e5b7e8267e202b2e6"
+    },
+    {
+      "path": "src/assets/fonts/Jost-Bold.ttf",
+      "sha1": "fd39b4b2107470bac594764b2f95d8040d9e4dd8"
+    },
+    {
+      "path": "src/assets/fonts/Jost-BoldItalic.ttf",
+      "sha1": "92fe0900b407e707756c8d1d292d1afa478ac92f"
+    },
+    {
+      "path": "src/assets/fonts/Jost-ExtraBold.ttf",
+      "sha1": "28615328fc35f309f25479279dddd4a2ad44ccd4"
+    },
+    {
+      "path": "src/assets/fonts/Jost-ExtraBoldItalic.ttf",
+      "sha1": "c8031ca938e38c5606a659511701a57958c14db1"
+    },
+    {
+      "path": "src/assets/fonts/Jost-ExtraLight.ttf",
+      "sha1": "a29cc5771ed3bf945706db4f5fe3d0006c80ab25"
+    },
+    {
+      "path": "src/assets/fonts/Jost-ExtraLightItalic.ttf",
+      "sha1": "a6fa28d05b38004786b85cd03fe04009e6d88c46"
+    },
+    {
+      "path": "src/assets/fonts/Jost-Italic.ttf",
+      "sha1": "1d26e61f6b9bb4bd5310b4dfbd2282f0a136b7d1"
+    },
+    {
+      "path": "src/assets/fonts/Jost-Light.ttf",
+      "sha1": "0834d00cccd296fbb3d033d42e8bd5a1626878e3"
+    },
+    {
+      "path": "src/assets/fonts/Jost-LightItalic.ttf",
+      "sha1": "f0a4c886ec1c59fa70dfdcacf013e4d2c7fc2d2f"
+    },
+    {
+      "path": "src/assets/fonts/Jost-Medium.ttf",
+      "sha1": "14b0118610bd05ceacad37967550f3f209a4e70c"
+    },
+    {
+      "path": "src/assets/fonts/Jost-Regular.ttf",
+      "sha1": "a6b7f9966c98479af15400ac41a867b12c1b6e2c"
+    },
+    {
+      "path": "src/assets/fonts/Jost-SemiBold.ttf",
+      "sha1": "eae211ccddefaecf7a9641967c023b3722071d75"
+    },
+    {
+      "path": "src/assets/fonts/Jost-Thin.ttf",
+      "sha1": "c7e581ff52b30487aa0c5e8346fafb4840bebd0b"
+    },
+    {
+      "path": "src/assets/fonts/Jost-ThinItalic.ttf",
+      "sha1": "35ebde0b739de1b2511dc3f2ccdbb0eebf2da985"
+    }
+  ]
+}
