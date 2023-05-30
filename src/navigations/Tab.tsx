@@ -50,6 +50,14 @@ export default function TabNavigation() {
           return <Text style={[styles.navigation, {color: COLORS.secondaryText}]}>Update</Text>
         }
       }}/>
+      <Tab.Screen name='Favorites' component={Update} options={{
+        tabBarIcon: ({ focused }) => {
+          if (focused) {
+            return <Text style={[styles.navigation, { color: dark ? 'white' : COLORS.primaryText, borderBottomColor: dark ? 'orange' : 'blue', borderBottomWidth: 3, borderRadius: 2 }]}>Favorites</Text>
+          }
+          return <Text style={[styles.navigation, {color: COLORS.secondaryText}]}>Favorites</Text>
+        }
+      }}/>
     </Tab.Navigator>
   )
 }
