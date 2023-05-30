@@ -16,13 +16,21 @@ export default function Latest({ navigation }: any) {
 
   let dispatch = useDispatch<AppDispatch>()
   const { error, status, data, dark } = useSelector((state: StateType) => state.posts)
+  const [filteredItem, setFilteredItem] = useState([])
+  const [search, setSearch] = useState('')
   const [isEnabled, setIsEnabled] = useState(false);
 
   useEffect(() => {
     if (isFocused) {
       dispatch(getAllPost())
+      setFilteredItem(data)
     }
   }, [isFocused])
+
+  const handleSearch = (value: string) => {
+    let filtered = data.filter((e: any) => e.title.toLowerCase().includes(value.toLowerCase()))
+    setFilteredItem(filtered)    
+  }
 
   const renderItem = ({ item }: any) => {
     return (
@@ -36,7 +44,7 @@ export default function Latest({ navigation }: any) {
   }
 
   return (
-    <SafeAreaView style={[styles.container, {backgroundColor: dark ? 'black' : COLORS.primaryBackground}]}>
+    <SafeAreaView style={[styles.container, { backgroundColor: dark ? 'black' : COLORS.primaryBackground }]}>
 
       <>
         <StatusBar
@@ -44,7 +52,7 @@ export default function Latest({ navigation }: any) {
         />
 
         <View style={styles.headerContainer}>
-          <Text style={[styles.text, {color:  dark ? 'white' : COLORS.primaryText}]}>Blogs</Text>
+          <Text style={[styles.text, { color: dark ? 'white' : COLORS.primaryText }]}>Blogs</Text>
           <Switch
             trackColor={{ false: '#767577', true: '#81b0ff' }}
             thumbColor={dark ? '#f5dd4b' : '#f4f3f4'}
@@ -57,8 +65,9 @@ export default function Latest({ navigation }: any) {
         <View style={styles.searchContainer}>
           <TextInput
             placeholder='Search Blogs'
+            onChangeText={(value: string) => handleSearch(value)}
             placeholderTextColor={dark ? 'white' : COLORS.secondaryText}
-            style={[styles.input, {backgroundColor: dark ? 'gray' : COLORS.secondaryBackground}]}
+            style={[styles.input, { backgroundColor: dark ? 'gray' : COLORS.secondaryBackground }]}
           />
           <Feather name='search' size={24} color={dark ? 'white' : 'black'} style={{ position: 'absolute', top: 22, left: 12 }} />
         </View>
@@ -67,7 +76,7 @@ export default function Latest({ navigation }: any) {
             <ActivityIndicator size="large" color="black" style={styles.loading} />
             :
             <FlatList
-              data={data}
+              data={filteredItem}
               renderItem={renderItem}
             />
         }
