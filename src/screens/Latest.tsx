@@ -29,7 +29,7 @@ export default function Latest({ navigation }: any) {
 
   const handleSearch = (value: string) => {
     let filtered = data.filter((e: any) => e.title.toLowerCase().includes(value.toLowerCase()))
-    setFilteredItem(filtered)    
+    setFilteredItem(filtered)
   }
 
   const renderItem = ({ item }: any) => {
