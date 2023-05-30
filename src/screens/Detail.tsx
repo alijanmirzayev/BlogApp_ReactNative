@@ -7,12 +7,15 @@ import { COLORS } from '../constants/Colors';
 import { FONTS } from '../constants/Fonts';
 import { AppDispatch, StateType } from '../redux';
 import { getPostById } from '../redux/Slice/PostsSlice';
+import { favorite } from '../redux/Slice/FavoriteSlice';
 
 export default function Detail({ route, navigation }: any) {
   const itemInfo: string = route.params
 
   let dispatch = useDispatch<AppDispatch>()
   const { detailError, detailStatus, detail, dark } = useSelector((state: StateType) => state.posts)
+  const { data, error, status } = useSelector((state: StateType) => state.favorite)
+
   useEffect(() => {
     dispatch(getPostById(itemInfo))
   }, [])
@@ -20,6 +23,13 @@ export default function Detail({ route, navigation }: any) {
   const handleExit = () => {
     navigation.navigate('Tab')
   }
+
+  const handleFavorite = () => {
+    dispatch(favorite(detail))
+  }
+
+  const isExist = data.find((item): any => item.id == detail.id)
+  console.log(isExist)
 
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: dark ? 'black' : COLORS.primaryBackground, }]}>
@@ -33,8 +43,8 @@ export default function Detail({ route, navigation }: any) {
               <TouchableOpacity onPress={handleExit} style={styles.exitContainer}>
                 <FontAwesome name='long-arrow-left' size={32} color={dark ? 'white' : 'black'} />
               </TouchableOpacity>
-              <TouchableOpacity style={styles.exitContainer}>
-                <Fontisto name='favorite' size={32} color={dark ? 'white' : 'black'} />
+              <TouchableOpacity style={styles.exitContainer} onPress={handleFavorite}>
+                <Fontisto name='favorite' size={32} color={isExist ? 'red' : 'orange' } />
               </TouchableOpacity>
             </View>
 
