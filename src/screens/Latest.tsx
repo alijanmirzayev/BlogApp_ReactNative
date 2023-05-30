@@ -17,15 +17,17 @@ export default function Latest({ navigation }: any) {
   let dispatch = useDispatch<AppDispatch>()
   const { error, status, data, dark } = useSelector((state: StateType) => state.posts)
   const [filteredItem, setFilteredItem] = useState([])
-  const [search, setSearch] = useState('')
   const [isEnabled, setIsEnabled] = useState(false);
 
   useEffect(() => {
     if (isFocused) {
       dispatch(getAllPost())
-      setFilteredItem(data)
     }
   }, [isFocused])
+
+  useEffect(() => {
+    setFilteredItem(data)
+  }, [data])
 
   const handleSearch = (value: string) => {
     let filtered = data.filter((e: any) => e.title.toLowerCase().includes(value.toLowerCase()))
