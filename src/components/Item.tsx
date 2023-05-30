@@ -4,7 +4,7 @@ import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { COLORS } from '../constants/Colors'
 import { FONTS } from '../constants/Fonts'
 import { AppDispatch, StateType } from '../redux';
-import { deletePostById, getAllPost } from '../redux/Posts/PostsSlice';
+import { deletePostById, getAllPost } from '../redux/Slice/PostsSlice';
 
 export default function Item({ itemInfo, navigation }: any) {
 

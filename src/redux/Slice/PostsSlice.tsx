@@ -24,10 +24,10 @@ interface initalState {
 
 const initalState: initalState = {
     data: [],
-    detail: {},
-    detailStatus: null,
     status: null,
     error: null,
+    detail: {},
+    detailStatus: null,
     detailError: null,
     dark: false
 }

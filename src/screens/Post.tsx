@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { COLORS } from '../constants/Colors'
 import { FONTS } from '../constants/Fonts'
 import { AppDispatch, StateType } from '../redux';
-import { createPost } from '../redux/Posts/PostsSlice';
+import { createPost } from '../redux/Slice/PostsSlice';
 
 export default function Post({navigation}: any) {
 

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useIsFocused} from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, StateType } from '../redux';
-import { getPostById, updatePostById } from '../redux/Posts/PostsSlice';
+import { getPostById, updatePostById } from '../redux/Slice/PostsSlice';
 import { COLORS } from '../constants/Colors';
 import { FONTS } from '../constants/Fonts';
 import { ActivityIndicator } from 'react-native';

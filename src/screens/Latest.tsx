@@ -8,7 +8,7 @@ import { COLORS } from '../constants/Colors'
 import { FONTS } from '../constants/Fonts'
 import { SIZE } from '../constants/Size'
 import { AppDispatch, StateType } from '../redux'
-import { darkmode, getAllPost } from '../redux/Posts/PostsSlice'
+import { darkmode, getAllPost } from '../redux/Slice/PostsSlice'
 
 export default function Latest({ navigation }: any) {
 
